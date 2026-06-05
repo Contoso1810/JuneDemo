@@ -6,7 +6,7 @@ def vulnerable_login(username, password):
 
     # ❌ VULNERABLE: Direct string concatenation with user input
     query = f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'"
-    print("Executing query:", query)  # For teaching/demo only
+    print("Executing login query for supplied username (password redacted)")  # Safe demo log
 
     cur.execute(query)
 
